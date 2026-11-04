@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collective Insight: Stewardship in the Complex Systems Age</title>
+<meta name="description" content="A framework for how institutions with unique visibility can help society build shared understanding of the systems it creates.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#EDF1EE; --surface:#E1E8E3; --ink:#1B2A27; --muted:#54635F;
+  --moss:#3F6B4C; --rule:#B9C6BE;
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121A18; --surface:#1A2623; --ink:#E3EAE5; --muted:#9AABA5;
+    --moss:#8DBB98; --rule:#2F403B; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121A18; --surface:#1A2623; --ink:#E3EAE5; --muted:#9AABA5;
+  --moss:#8DBB98; --rule:#2F403B; color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.1rem/1.7 var(--serif)}
+a{color:var(--moss);text-underline-offset:3px}
+a:focus-visible{outline:2px solid var(--moss);outline-offset:3px}
+.wrap{max-width:44rem;margin:0 auto;padding:0 1.5rem}
+header.site{padding:1.25rem 0;border-bottom:1px solid var(--rule)}
+header.site .wrap{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:baseline;justify-content:space-between}
+.brand{font:600 1rem var(--sans);color:var(--ink);text-decoration:none}
+nav a{font:.95rem var(--sans);color:var(--muted);margin-right:1.25rem;text-decoration:none}
+nav a:last-child{margin-right:0}
+nav a:hover{color:var(--ink)}
+.hero{padding:4.5rem 0 3.5rem}
+.hero svg{width:100%;max-width:22rem;height:auto;display:block;margin-bottom:2.5rem}
+h1{font:600 clamp(2rem,5.5vw,3.1rem)/1.15 var(--serif);margin:0 0 1.25rem;letter-spacing:-.01em}
+.lede{font-size:1.3rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-block;font:600 1rem var(--sans);padding:.7rem 1.2rem;border:1.5px solid var(--moss);color:var(--moss);text-decoration:none;border-radius:4px;margin-right:.75rem}
+.btn.primary{background:var(--moss);color:var(--bg)}
+.btn:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+section{padding:3rem 0;border-top:1px solid var(--rule)}
+h2{font:600 1.7rem/1.25 var(--serif);margin:0 0 1.25rem}
+h3{font:600 1.05rem var(--sans);margin:1.75rem 0 .35rem}
+p{margin:0 0 1.15rem}
+.pull{font-size:1.35rem;font-style:italic;border-left:3px solid var(--moss);padding-left:1.25rem;margin:2rem 0}
+.tiers{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:1.5rem 0}
+.tiers div{background:var(--surface);padding:1rem 1.25rem}
+.tiers b{font:600 1rem var(--sans);display:block}
+.tiers span{color:var(--muted);font-size:1rem}
+ul{padding-left:1.25rem;margin:0 0 1.15rem}
+li{margin-bottom:.35rem}
+.note{color:var(--muted);font-size:1rem}
+footer{padding:2.5rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);font:.95rem var(--sans)}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">Collective Insight</a>
+    <nav aria-label="Primary">
+      <a href="#problem">The problem</a>
+      <a href="#proposal">The proposal</a>
+      <a href="#why">Why institutions</a>
+      <a href="#essays">Essays</a>
+      <a href="#about">About</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<div class="wrap">
+  <div class="hero">
+    <svg viewBox="0 0 320 150" role="img" aria-label="Five overlapping circles, each showing only part of a larger whole">
+      <g fill="none" stroke="var(--moss)" stroke-width="1.5">
+        <circle cx="90" cy="75" r="55" opacity=".35"/>
+        <circle cx="130" cy="75" r="55" opacity=".5"/>
+        <circle cx="170" cy="75" r="55" opacity=".65"/>
+        <circle cx="210" cy="75" r="55" opacity=".8"/>
+        <circle cx="250" cy="75" r="55"/>
+      </g>
+    </svg>
+    <h1>Collective insight for the complex systems age</h1>
+    <p class="lede">Data is becoming a foundational primitive of modern civilization. The challenge is no longer generating information. It is turning fragmented information into shared understanding.</p>
+    <a class="btn primary" href="proposal.pdf">Read the proposal</a>
+    <a class="btn" href="#problem">Start with the problem</a>
+  </div>
+</div>
+
+<div class="wrap">
+<section id="problem">
+  <h2>The human challenge beneath the data challenge</h2>
+  <p>The central challenge of every era is not merely technological. It is human. We act on the information available to us. We make decisions with incomplete information, form explanations from limited perspectives, and interpret reality through the experiences, incentives, and communities we belong to.</p>
+  <p class="pull">No individual, organization, or nation can see enough of the whole to fully understand the systems they collectively create.</p>
+  <p>We also do not assemble into one unified collective. We organize through governments, corporations, institutions, classes, cultures, and nations. Some degree of tribalism is inevitable, and so are power differences between these groups.</p>
+  <p>Society holds together while lived experience stays reasonably close to what people believe the social contract promises. When that gap widens, frustration builds into alienation and distrust. People compare what they were taught to expect with what they experience, and what they have with what others have. Then they search for other explanations, other institutions, and other tribes.</p>
+  <p>The enduring challenge is not how to generate more information. It is how to create enough shared understanding that diverse groups can keep cooperating within systems no single participant can fully comprehend. And the most visible players have to show, through what they do, that they serve the greater good.</p>
+  <p>A garden’s soil must be tended and cultivated over time to produce a harvest. So must the social, economic, and informational foundations of modern civilization.</p>
+</section>
+
+<section id="proposal">
+  <h2>The proposal: a trusted-insights program</h2>
+  <p>Organizations that observe technology adoption, security, productivity, and accessibility at scale could convert consented, privacy-protected telemetry into governed aggregate findings, and share them in tiers.</p>
+  <div class="tiers">
+    <div><b>Public tier</b><span>Broad reports available to everyone.</span></div>
+    <div><b>Professional tier</b><span>Benchmarks, methodologies, confidence measures, and industry-specific observations for verified organizations.</span></div>
+    <div><b>Research tier</b><span>Detailed aggregated datasets in controlled environments, with independent review, for approved institutions.</span></div>
+  </div>
+  <h3>Safeguards</h3>
+  <ul>
+    <li>Policy: minimum sample sizes, disclosure review, ethical-use terms.</li>
+    <li>Human: independent review boards, privacy specialists, external advisors.</li>
+    <li>Technical: data minimization, aggregation thresholds, differential privacy where appropriate, access auditing.</li>
+  </ul>
+  <h3>Scientific integrity</h3>
+  <p>Every finding is labeled by what it can support: observational, strong evidence, or experimental, and whether the outcome was customer-reported or measured by validated internal systems.</p>
+</section>
+
+<section id="why">
+  <h2>Why institutions with unique visibility</h2>
+  <p>Land, labor, capital, and energy each forced societies to decide how to organize their use. Data now raises the same governance question: how do we create value from it while preserving privacy, avoiding concentrated power, and ensuring insight benefits more than a few actors?</p>
+  <p>A small number of organizations, including Microsoft, Google, Amazon, and OpenAI, plus governments and universities, can see patterns that no single customer can. With that position comes a chance, and arguably a duty, to act as steward rather than only as vendor.</p>
+  <p class="note">This site argues for the idea, not for any one company. Microsoft is the worked example.</p>
+</section>
+
+<section id="essays">
+  <h2>Essays and research notes</h2>
+  <p>Essays will appear here as the framework develops.</p>
+  <ul>
+    <li>Data as a foundational primitive</li>
+    <li>The social contract of technology</li>
+    <li>Information stewardship</li>
+    <li>Corporate legitimacy in the AI age</li>
+    <li>Tribalism and complex systems</li>
+  </ul>
+</section>
+
+<section id="about">
+  <h2>About</h2>
+  <p>[Your name and a short note on why you wrote this.]</p>
+  <p>Feedback is welcome: <a href="mailto:you@example.com">you@example.com</a></p>
+</section>
+</div>
+</main>
+
+<footer>
+  <div class="wrap">Collective Insight. A living framework, tended over time.</div>
+</footer>
+</body>
+</html>
