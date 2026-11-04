@@ -51,6 +51,25 @@ h2{font:600 1.7rem/1.25 var(--serif);margin:0 0 1.25rem}
 h3{font:600 1.05rem var(--sans);margin:1.75rem 0 .35rem}
 p{margin:0 0 1.15rem}
 .pull{font-size:1.35rem;font-style:italic;border-left:3px solid var(--moss);padding-left:1.25rem;margin:2rem 0}
+.framework{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:2.5rem 0 0}
+.framework-panel{background:var(--surface);padding:1.25rem}
+.framework-panel h3{margin:.1rem 0 1rem}
+.framework-flow{display:grid;gap:.45rem;margin:0;padding:0;list-style:none}
+.framework-flow li{display:flex;align-items:center;gap:.6rem;font:600 1rem var(--sans);color:var(--ink)}
+.framework-flow li:not(:last-child)::after{content:"↓";color:var(--moss);font-size:1.2rem;margin-left:auto;margin-right:.35rem}
+.framework-equation{display:grid;gap:.45rem;margin:0;padding:0;list-style:none;font:600 1rem var(--sans)}
+.framework-equation li{display:flex;align-items:center;gap:.55rem}
+.framework-equation li:not(:last-child)::after{content:"+";color:var(--moss);font-size:1.2rem;margin-left:auto;margin-right:.35rem}
+.framework-result{border-top:1px solid var(--rule);margin-top:.85rem;padding-top:.85rem;font:600 1rem var(--sans);color:var(--moss)}
+.why-now{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--rule);border:1px solid var(--rule);margin:1.5rem 0}
+.why-now div{background:var(--surface);padding:1rem}
+.why-now b{font:600 1rem var(--sans);display:block;margin-bottom:.3rem}
+.why-now span{color:var(--muted);font-size:1rem;line-height:1.45}
+.callout{background:var(--surface);border-left:3px solid var(--moss);padding:1.25rem 1.5rem;margin:1.5rem 0;font-size:1.25rem}
+.essay-list{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:1.5rem 0}
+.essay{background:var(--surface);padding:1rem 1.25rem}
+.essay b{font:600 1rem var(--sans);display:block;margin-bottom:.25rem}
+.essay span{color:var(--muted);font-size:1rem}
 .tiers{display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);margin:1.5rem 0}
 .tiers div{background:var(--surface);padding:1rem 1.25rem}
 .tiers b{font:600 1rem var(--sans);display:block}
@@ -59,6 +78,12 @@ ul{padding-left:1.25rem;margin:0 0 1.15rem}
 li{margin-bottom:.35rem}
 .note{color:var(--muted);font-size:1rem}
 footer{padding:2.5rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted);font:.95rem var(--sans)}
+.updated{margin:.5rem 0 0;font-size:.85rem}
+@media (max-width:38rem){
+  .framework{grid-template-columns:1fr}
+  .why-now{grid-template-columns:1fr 1fr}
+  .why-now div:last-child{grid-column:1/-1}
+}
 </style>
 </head>
 <body>
@@ -67,6 +92,7 @@ footer{padding:2.5rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted)
     <a class="brand" href="#top">Collective Insight</a>
     <nav aria-label="Primary">
       <a href="#problem">The problem</a>
+      <a href="#why-now">Why now?</a>
       <a href="#proposal">The proposal</a>
       <a href="#why">Why institutions</a>
       <a href="#essays">Essays</a>
@@ -95,6 +121,30 @@ footer{padding:2.5rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted)
 </div>
 
 <div class="wrap">
+<div class="framework" aria-label="Collective insight framework">
+  <div class="framework-panel">
+    <h3>From data to resilience</h3>
+    <ol class="framework-flow">
+      <li>Data</li>
+      <li>Information</li>
+      <li>Insight</li>
+      <li>Understanding</li>
+      <li>Trust</li>
+      <li>Resilience</li>
+    </ol>
+  </div>
+  <div class="framework-panel">
+    <h3>The coordination challenge</h3>
+    <ul class="framework-equation">
+      <li>Complexity</li>
+      <li>Limited perspective</li>
+      <li>Tribalism</li>
+      <li>Power dynamics</li>
+    </ul>
+    <div class="framework-result">Shared understanding is the bridge.</div>
+  </div>
+</div>
+
 <section id="problem">
   <h2>The human challenge beneath the data challenge</h2>
   <p>The central challenge of every era is not merely technological. It is human. We act on the information available to us. We make decisions with incomplete information, form explanations from limited perspectives, and interpret reality through the experiences, incentives, and communities we belong to.</p>
@@ -103,6 +153,18 @@ footer{padding:2.5rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted)
   <p>Society holds together while lived experience stays reasonably close to what people believe the social contract promises. When that gap widens, frustration builds into alienation and distrust. People compare what they were taught to expect with what they experience, and what they have with what others have. Then they search for other explanations, other institutions, and other tribes.</p>
   <p>The enduring challenge is not how to generate more information. It is how to create enough shared understanding that diverse groups can keep cooperating within systems no single participant can fully comprehend. And the most visible players have to show, through what they do, that they serve the greater good.</p>
   <p>A garden’s soil must be tended and cultivated over time to produce a harvest. So must the social, economic, and informational foundations of modern civilization.</p>
+</section>
+
+<section id="why-now">
+  <h2>Why now?</h2>
+  <p>The need for shared understanding is becoming more urgent as the systems around us accelerate and grow more interconnected.</p>
+  <div class="why-now">
+    <div><b>AI amplification</b><span>Systems can now generate, personalize, and distribute explanations at unprecedented speed.</span></div>
+    <div><b>Information abundance</b><span>More data does not automatically produce a clearer picture of reality.</span></div>
+    <div><b>Institutional distrust</b><span>People are less willing to accept authority without evidence of stewardship.</span></div>
+    <div><b>Accelerating complexity</b><span>Decisions increasingly produce effects across systems no one actor controls.</span></div>
+    <div><b>Global interconnectedness</b><span>Local choices can quickly become shared consequences.</span></div>
+  </div>
 </section>
 
 <section id="proposal">
@@ -127,19 +189,22 @@ footer{padding:2.5rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted)
   <h2>Why institutions with unique visibility</h2>
   <p>Land, labor, capital, and energy each forced societies to decide how to organize their use. Data now raises the same governance question: how do we create value from it while preserving privacy, avoiding concentrated power, and ensuring insight benefits more than a few actors?</p>
   <p>A small number of organizations, including Microsoft, Google, Amazon, and OpenAI, plus governments and universities, can see patterns that no single customer can. With that position comes a chance, and arguably a duty, to act as steward rather than only as vendor.</p>
-  <p class="note">This site argues for the idea, not for any one company. Microsoft is the worked example.</p>
+  <p class="callout">This framework is not fundamentally about Microsoft. It is about the emerging responsibilities of any institution with unique visibility into systems larger than any individual participant can fully comprehend.</p>
+  <p class="note">Microsoft serves as a worked example because of its scale, reach, and capabilities. The idea applies equally to other technology companies, governments, universities, and institutions that can responsibly turn fragmented observations into shared understanding.</p>
 </section>
 
 <section id="essays">
   <h2>Essays and research notes</h2>
-  <p>Essays will appear here as the framework develops.</p>
-  <ul>
-    <li>Data as a foundational primitive</li>
-    <li>The social contract of technology</li>
-    <li>Information stewardship</li>
-    <li>Corporate legitimacy in the AI age</li>
-    <li>Tribalism and complex systems</li>
-  </ul>
+  <p>The framework will develop through writing, testing, and revision. These are the first questions it will explore.</p>
+  <div class="essay-list">
+    <div class="essay"><b>Data as a foundational primitive</b><span>What changes when data becomes a basic input to social and economic coordination?</span></div>
+    <div class="essay"><b>The human challenge beneath the data challenge</b><span>Why better information still has to meet limited perspectives, incentives, and lived experience.</span></div>
+    <div class="essay"><b>Collective insight as infrastructure</b><span>How shared understanding might become a durable capability rather than a one-time report.</span></div>
+    <div class="essay"><b>The social contract of technology</b><span>What institutions owe the communities whose systems they help shape.</span></div>
+    <div class="essay"><b>Information stewardship</b><span>How privacy, evidence, and public benefit can govern the use of institutional visibility.</span></div>
+    <div class="essay"><b>Corporate legitimacy in the AI age</b><span>Why visible stewardship may matter as much as technical capability.</span></div>
+    <div class="essay"><b>Tribalism and complex systems</b><span>How diverse groups can cooperate without pretending their differences do not exist.</span></div>
+  </div>
 </section>
 
 <section id="about">
@@ -151,7 +216,10 @@ footer{padding:2.5rem 0 4rem;border-top:1px solid var(--rule);color:var(--muted)
 </main>
 
 <footer>
-  <div class="wrap">Collective Insight. A living framework, tended over time.</div>
+  <div class="wrap">
+    <div>Collective Insight. A living framework, tended over time.</div>
+    <p class="updated">Last updated: <time datetime="2026-11-04T08:01:46-05:00">November 4, 2026 at 8:01 AM EST</time></p>
+  </div>
 </footer>
 </body>
 </html>
